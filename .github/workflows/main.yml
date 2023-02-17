@@ -7,7 +7,7 @@ on:
   schedule:
     # 下一行是说在每天的国际标准时间23点（北京时间早上7点）触发该任务
     # 你可以随意修改
-    - cron: '0 23 * * *'    
+    - cron: '0 * 1 * *'    
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
@@ -31,6 +31,6 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4.2.5
         with:
           token: ${{ secrets.ACCESS_TOKEN }}
-          repository-name: FizzerYu/FizzerYu.github.io # 修改这里
+          repository-name: EDMMCL/edmmcl.github.io # 修改这里
           BRANCH: main  # 如果你的仓库默认分支是 master 记得修改这里                    
           FOLDER: public
